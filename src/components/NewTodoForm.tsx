@@ -2,24 +2,27 @@
 
 import { defaultMaxListeners } from "events";
 import React from "react";
+import TodoList from "./TodoList";
 
 const NewtodoList=()=>{
 
     const [todos,settodo]=React.useState();
 
     const onSubmit=(event:any)=>{
+       // event.preventDefault();
+
+         console.log('form',event.get("inputboxvalue"))
+
  
-         console.log('form',event.currentTarget)
-
-         event.preventDefault();
-
 
     }
 
 return (
-     <form onSubmit={onSubmit}>
-     <input type="text"></input>
+     <form  onSubmit={()=>{}} action={onSubmit}>
+     <input name="inputboxvalue" type="text"></input>
      <input type="submit" ></input>
+     <TodoList todo={todos}/>
+
       </form>  
 )
 }

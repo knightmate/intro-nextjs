@@ -21,9 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
-      <nav>
-        <ul className='flex items-center'>
+       <nav>
+         <ul className='flex items-center'>
           {
             links.map((link)=>{
               return(
@@ -35,6 +34,9 @@ export default function RootLayout({
           }
         </ul>
       </nav>
+      <div className={inter.className}>{children}</div>
+
+ 
     </html>
   )
 }
