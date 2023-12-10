@@ -4,6 +4,7 @@ import Link from "next/link";
  import React, { useTransition } from "react";
  import { useRouter } from 'next/navigation'
  
+ 
 const Todo=({todo})=>{
    
     const router = useRouter();
@@ -24,6 +25,7 @@ const Todo=({todo})=>{
               console.log(result.message);
               if(result.message=="Done"){
                 router.refresh()
+
               }
 
             } catch (error) {

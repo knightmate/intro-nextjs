@@ -8,8 +8,10 @@ export const GET=async(req)=>{
 
     console.log("Get API called!",id);
 
-    TodoService.markDone(id);
+    TodoService.refreshTodo();
     
+    console.log("Deleted!",TodoService.getTodos()[0]);
+
     return NextResponse.json({message:"Done",data:TodoService.getTodos()});
 
 }

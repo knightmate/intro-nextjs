@@ -7,8 +7,7 @@ import React from "react";
 const getData=async()=>{
 
  const todolist=  TodoService.getTodos();
-
-const waiting=await new Promise((resolve)=>{
+ const waiting=await new Promise((resolve)=>{
   setTimeout(()=>resolve("done"),2000);
 });
  
@@ -22,6 +21,8 @@ const TodosPage=async()=>{
 
   const todos=await getData();
  
+  console.log("TodosPage",todos[0],"not Cache",TodoService.getTodos()[0]);
+
   return (
     < div>
     Todos
