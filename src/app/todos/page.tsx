@@ -1,7 +1,11 @@
+import NewtodoList from "@/components/NewTodoForm";
 const TodosPage=()=>{
 
   return (
-    < div>Docs Page In</div>
+    < div>
+    Todos
+    <NewtodoList/>
+    </div>
   )
 
 
