@@ -2,6 +2,7 @@
 
 import { todo } from "node:test";
 import React from "react";
+import Todo from "./Todo";
 
 const TodoList=({todos})=>{
 
@@ -10,7 +11,7 @@ return (
     <>
     {
         todos.map((todo)=>{
-            return <h1>{todo}</h1>
+            return <Todo todo={todo}/>
         })
     }
     </> 

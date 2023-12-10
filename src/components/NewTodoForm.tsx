@@ -21,8 +21,7 @@ return (
      <form  onSubmit={()=>{}} action={onSubmit}>
      <input name="inputboxvalue" type="text"></input>
      <input type="submit" ></input>
-     <TodoList todo={todos}/>
-
+ 
       </form>  
 )
 }
